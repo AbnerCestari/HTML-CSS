@@ -1,12 +1,12 @@
 ## Aplicativo Web To-Do List
 
 ```markdown
-![Screenshot do To-Do List](https://raw.githubusercontent.com/AbnerCestari/HTML-CSS/master/To%20do%20List/Capture.JPG)
+![Screenshot do To-Do List](https://github.com/AbnerCestari/HTML-CSS/blob/master/To-Do%20List/Capture.JPG)
 ```
 
 Esta é uma aplicação web de lista de tarefas (To-Do List), desenvolvida para demonstrar os novos conceitos aprendidos em CSS e habilidades de desenvolvimento web.
 
-O aplicativo permite que os usuários insiram tarefas em um campo de texto fornecido e, ao pressionar "Enter", as tarefas são adicionadas à lista. 
+O aplicativo permite que os usuários insiram tarefas em um campo de texto fornecido e, ao pressionar "Enter", as tarefas são adicionadas à lista.
 
 A interface é estilizada usando propriedades CSS como:
 
@@ -28,7 +28,7 @@ Além das propriedades CSS mencionadas, o código também utiliza outros conceit
 * **Lista não ordenada (`<ul>`)** : É usada para exibir as tarefas adicionadas, criando uma lista vertical.
 * **Elementos `<i>`** : São utilizados para representar ícones visuais de marcação de tarefa como concluída e ícone de exclusão.
 
-Esses são alguns dos principais elementos e conceitos utilizados no código para criar uma aplicação web funcional de To-Do List. O objetivo é mostrar o uso integrado de HTML, CSS e JavaScript para criar uma interface de usuário interativa e responsiva para gerenciar uma lista de tarefas. O código servirá como base para futuros aprimoramentos e funcionalidades na criação de um aplicativo web completo de lista de tarefas. 
+Esses são alguns dos principais elementos e conceitos utilizados no código para criar uma aplicação web funcional de To-Do List. O objetivo é mostrar o uso integrado de HTML, CSS e JavaScript para criar uma interface de usuário interativa e responsiva para gerenciar uma lista de tarefas. O código servirá como base para futuros aprimoramentos e funcionalidades na criação de um aplicativo web completo de lista de tarefas.
 
 Primeiro upload em 19/07/2023.
 
