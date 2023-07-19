@@ -1,8 +1,6 @@
 ## Aplicativo Web To-Do List
 
-```markdown
 ![Screenshot do To-Do List](https://github.com/AbnerCestari/HTML-CSS/blob/master/To-Do%20List/Capture.JPG)
-```
 
 Esta é uma aplicação web de lista de tarefas (To-Do List), desenvolvida para demonstrar os novos conceitos aprendidos em CSS e habilidades de desenvolvimento web.
 
