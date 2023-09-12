@@ -1,0 +1,155 @@
+/* Importação da fonte escolhida */
+@font-face {
+    font-family: 'Arquitecta';
+    src: url('Arquitecta.woff') format('woff');
+    font-weight: lighter;
+    font-style: lighter;
+}
+
+/* Estilo do CSS padrão de todas as páginas*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 50px;
+}
+
+/* Meu logo */
+img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Container criado para armazenar os links lado a lado */
+.h1-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+/* Ajustes da fonte dos links */
+h1 {
+    margin: 15px;
+    font-family: 'Arquitecta', sans-serif;
+    font-size: 25px;
+    color: black; 
+    font-weight: 100;
+}
+
+/* Remove sublinhado dos links */
+h1 a:link {
+    text-decoration: none;
+    color: black; 
+}
+
+/* Estilo para o tópico da página da página atual sedo exibida */
+.current-page a:link {
+    text-decoration: underline; /* Adiciona o sublinhado ao link da página atual */
+}
+
+/* Mantém a cor preta para links visitados */
+h1 a:visited {
+    color: black;    
+}
+
+/* Estilos para a div que contém o h2 */
+.h2-container {
+    font-family: 'Arquitecta', sans-serif;
+    margin-top: -20px; /* Ajusta a margem superior para aproximar o h2 das h1 */
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+/* Estilo para a "caixa" que contém o título, texto e imagem */
+.content-box {
+    display: flex; 
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto; 
+}
+
+/* Estilo para o título e texto à esquerda */
+.text-content {
+    flex: 1; 
+    text-align: left;
+    padding: 50px;
+}
+
+/* Estilo para a h1 dentro das div .text-content */
+.text-content h1 {
+    font-size: 40px;
+}
+
+/* Estilo para a imagem à direita na primeira content-box */
+.content-box.A .rounded-image {
+    max-width: 250px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+/* Estilo para a imagem à esquerda na segunda content-box */
+.content-box.B .left-image {
+    max-height: 350px;
+    margin: 20px;
+    border-radius: 15px;
+}
+.content-box.C .right-image {
+    max-height: 350px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+/* Estilo para a galeria de fotos */
+.gallery-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    max-width: 70%; /* Limita o tamanho máximo lateral */
+    margin: 0 auto; /* Centraliza a galeria na página */
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-height: 600px; 
+    position: relative;
+}
+
+.gallery img {
+    max-width: none; 
+    max-height: 600px;
+    width: auto; /* Garante a proporção original IMPORTANTE */
+    object-fit: contain; /* Evita distorção de proporções IMPORTANTE */
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo para a imagem atual */
+.gallery img.active {
+    display: block;
+}
+
+/* Estilo para os botões de navegação */
+.gallery-button {
+    color: gray;
+    background: none; /* Remove o fundo */
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.prev-button {
+    left: -30px;
+}
+
+.next-button {
+    right: -30px;
+}

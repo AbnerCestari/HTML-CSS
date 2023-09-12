@@ -3,79 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <style>
-        /* Importação da fonte Gibson */
-        @font-face {
-            font-family: 'Gibson';
-            src: url('Gibson-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* Estilo do CSS */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-            margin: 50px;
-        }
-        
-        img {
-            max-width: 400px;
-            height: auto;
-        }
-        
-        /* Container para armazenar os links lado a lado */
-        .h1-container {
-            margin-top: 20px;
-            display: flex;
-        }
-        
-        /* Ajustes da fonte dos links  */
-        h1 {
-            margin: 15px;
-            font-family: 'Gibson', sans-serif;
-            font-size: 20px;
-            color: black; 
-            font-weight: 100;
-        }
-
-        /* Remove sublinhado dos links */
-        h1 a:link {
-            text-decoration: none;
-            color: black; 
-        }
-
-        /* Mantém a cor preta para links visitados */
-        h1 a:visited {
-            color: black;
-        }
-
-        /* Estilos para a div que contém o h2 */
-        .h2-container {
-            text-align: center;
-            font-family: 'Gibson', sans-serif;
-            font-size: 12px;
-            color: black; 
-            font-weight: 100;
-            margin-top: -20px; /* Ajusta a margem superior para aproximar o h2 das h1 */
-        }
-    </style>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSS Padrão das páginas -->
 </head>
 <body>
-    <img src="Logo + Wedding.png" alt="Logo Abner Cestari" width="400px">
+    <!-- Meu logo com link para a página inicial -->
+    <a href="index.html">
+        <img src="Logo + Photography.png" alt="Logo Abner Cestari" width="400px">
+    </a>
+
+    <!-- Container dos links -->
     <div class="h1-container">
+        <h1 class="current-page"><a href="index.html">HOME</a></h1>
+        <h1><a href="weddings.html">WEDDINGS</a></h1>
+        <h1><a href="https://www.behance.net/abnercestari" target="_blank">BEHANCE</a></h1>
+        <h1><a href="https://www.instagram.com/abnercestari/" target="_blank">DESTINATIONS</a></h1>
         <h1><a href="about.html">ABOUT</a></h1>
-        <h1><a href="https://www.behance.net/abnercestari">BEHANCE</a></h1>
-        <h1><a href="https://www.instagram.com/abnercestari/">DESTINATIONS</a></h1>
-        <h1><a href="portfolio.html">PORTFOLIO</a></h1>
         <h1><a href="contact.html">CONTACT</a></h1>
     </div>
+
+    <!-- Container do subtítulo -->
     <div class="h2-container">
-        <h2>Weddings, engagement sessions, life style, travels and stories</h2>
+        <h2>Photography is art, a moment in time and a piece of your soul.</h2>
     </div>
+
+    <!-- Container da galeria de fotos -->
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="images2/DSC00248-2.jpg" alt="Singapore">
+            <img src="images2/AA012.jpg" alt="Italy">
+            <img src="images2/DSC00289.jpg" alt="Culver">
+            <img src="images2/DSC00616.jpg" alt="Hong Kong">
+            <img src="images2/DSC00806-2.jpg" alt="Santa Monica">
+            <img src="images2/DSC01103.jpg" alt="Crayons">
+            <img src="images2/DSC01174.jpg" alt="Kyoto">
+            <img src="images2/DSC03602.jpg" alt="Portrait1">
+            <img src="images2/DSC08308.jpg" alt="Gelatto">
+            <img src="images2/DSC09249.jpg" alt="Portrait2">
+            <img src="images2/Dubai Composite.jpg" alt="DubaiPortraits">
+            <img src="images2/IMG_0091.jpg" alt="MidnightSunsetNorway">
+            <img src="images2/IMG_0216.jpg" alt="HobbitonBagEndNewZealand">
+            <img src="images2/IMG_0415.jpg" alt="Parthenon">
+            <img src="images2/IMG_0938.jpg" alt="SydneyOperaHouse">
+            <img src="images2/IMG_1138.jpg" alt="Santorini">
+            <img src="images2/IMG_1414.jpg" alt="Egypt">
+            <img src="images2/IMG_2272.jpg" alt="Petra">
+            <img src="images2/IMG_3100.jpg" alt="Pisa">
+            <img src="images2/IMG_3295-Pano.jpg" alt="BurjKhalifa">
+            <img src="images2/IMG_3475.jpg" alt="BurjAlArab">
+            <img src="images2/IMG_4502.jpg" alt="Russia">
+            <img src="images2/IMG_4668.jpg" alt="Tallinn">
+            <img src="images2/IMG_4909.jpg" alt="Amsterdam">
+            <img src="images2/IMG_4926.jpg" alt="Amsterdam2">
+            <img src="images2/IMG_4965.jpg" alt="Portrait3">
+            <img src="images2/IMG_5259.jpg" alt="Copenhagen">
+            <img src="images2/IMG_7002.jpg" alt="Lisbon">
+            <img src="images2/IMG_7637.jpg" alt="Valencia">
+            <img src="images2/IMG_8014.jpg" alt="NorthCape">
+            <img src="images2/IMG_8820.jpg" alt="Mykonos">
+            <img src="images2/IMG_9468.jpg" alt="HavanaCuba">
+            <img src="images2/IMG_9872.jpg" alt="Geiranger">
+        </div>
+        <button class="gallery-button prev-button" onclick="prevSlide()">&lt;</button>
+        <button class="gallery-button next-button" onclick="nextSlide()">&gt;</button>
+    </div>
+    
+    <!-- Um pouco de JavaScript -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+    
+        // Função para exibir a imagem atual
+        function showImage(index) {
+            images.forEach((img, i) => {
+                if (i === index) {
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                }
+            });
+        }
+    
+        // Função para avançar para a próxima imagem
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+    
+        // Função para voltar para a imagem anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    
+        // Event listener para as setas do teclado
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (event.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+    
+        // Exibir a primeira imagem quando a página é carregada
+        showImage(currentIndex);
+    </script>
+    
 </body>
 </html>

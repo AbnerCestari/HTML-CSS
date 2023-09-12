@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo para a fonte do texto dentro do elemento .contact-form */
+        .contact-form {
+            font-family: 'Arquitecta', sans-serif;
+        }
+
+        /* Estilo para o título dentro do formulário (h2) */
+        .contact-form h2 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact</h1>
+    <!-- Logo Abner Cestari com link para a página inicial (index.html) -->
+    <a href="index.html">
+        <img src="Logo + Photography.png" alt="Logo Abner Cestari" width="400px">
+    </a>
+
+    <!-- Container dos links -->
+    <div class="h1-container">
+        <h1><a href="index.html">HOME</a></h1>
+        <h1><a href="weddings.html">WEDDINGS</a></h1>
+        <h1><a href="https://www.behance.net/abnercestari" target="_blank">BEHANCE</a></h1>
+        <h1><a href="https://www.instagram.com/abnercestari/" target="_blank">DESTINATIONS</a></h1>
+        <h1><a href="about.html">ABOUT</a></h1>   
+        <!-- Link "CONTACT" com classe "current-page" para aplicar o sublinhado -->
+        <h1 class="current-page"><a href="contact.html">CONTACT</a></h1>
+    </div>
+
+    <!-- Conteúdo da página "Contact" -->
+    <div class="h2-container">
+        <h2>E-mail: <a href="mailto:contato@example.com">cestariphoto@gmail.com</a></h2>
+        <h2>WhatsApp: <a href="https://wa.me/+15613242020">+1 561 3242020</a></h2>
+        <h2>Calls: +55 11 99713-8172</h2>
+        <h2><a href="https://github.com/AbnerCestari/HTML-CSS">Github Portfolio</a></h2>
+    </div>
+
+    <!-- Formulário de contato em uma tabela -->
+    <div class="contact-form">
+        <h2>Leave your message</h2>
+        <form action="" method="dialog">
+            <table>
+                <tr>
+                    <th><label for="nome">Name:</label></th>
+                    <td><input type="text" id="nome" name="nome" required></td>
+                </tr>
+                <tr>
+                    <th><label for="email">E-mail:</label></th>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th><label for="mensagem">Message:</label></th>
+                    <td><textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="Send"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
